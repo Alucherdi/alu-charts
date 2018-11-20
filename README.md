@@ -1,8 +1,8 @@
 # alu-charts
 
-##Warning *Not productive api*
+## Warning *Not productive api*
 
-###TODO: 
+### TODO: 
   * Normalize dot positions by limits reference
   * Add color and size personalization in chartOptions
   * Add join-line between dots

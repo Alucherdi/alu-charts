@@ -25,16 +25,16 @@ class Chart extends React.Component {
 		}
 	}
 
-	verticalBar() {
+	verticalBar = () => {
 		return (
 			<View style={{
-				width: this.state.offset,
-				height: this.state.h - this.state.offset,
+				width: state.offset,
+				height: state.h - state.offset,
 				flexDirection: "column-reverse",
 				justifyContent: "space-around",
 				alignItems: "center"
 			}}>
-				{Utils.getJumps(this.state.y).map((jump, index) => {
+				{Utils.getJumps(this.props.chartProperties.y).map((jump, index) => {
 					return (
 						<Text key={index} style={{
 							color: "white",
@@ -48,16 +48,16 @@ class Chart extends React.Component {
 		)
 	}
 
-	horizontalBar() {
+	horizontalBar = () => {
 		return (
 			<View style={{
-				width: this.state.w - this.state.offset,
-				height: this.state.offset,
+				width: state.w - state.offset,
+				height: state.offset,
 				flexDirection: "row",
 				justifyContent: "space-around",
 				alignItems: "center"
 			}}>
-				{Utils.getJumps(this.state.x).map((jump, index) => {
+				{Utils.getJumps(this.props.chartProperties.x).map((jump, index) => {
 					return (
 						<Text key={index} style={{
 							color: "white",
